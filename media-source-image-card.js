@@ -24,10 +24,9 @@ class MediaSourceImageCard extends HTMLElement {
 
             img {
               display: block;
-              max-width: ${this.config.width ? this.config.width : '100%'};
-              max-height: ${this.config.height ? this.config.height : '100%'};
-              width: 100%;
-              height: 100%;
+              max-width: 100%;
+              aspect-ratio: ${this.config.aspect_ratio ? this.config.aspect_ratio : '1.9'};
+              object-fit: ${this.config.object_fit ? this.config.object_fit : 'contain'} ;
             }
 
             img.off {
