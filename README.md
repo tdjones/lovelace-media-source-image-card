@@ -18,10 +18,17 @@ It can also toggle an entity if provided in configuration, like a light, switch,
 2. Place the file in your `config/www` folder
 3. Include the card as a resource through the UI (panels page) or using some code like this:
 
+    a. Via UI:
+      - Go to _Settings_ > _Dashboards_ > _... menu_ > _Resources_
+      - Click on the _Add Resource_ button.
+      - Set the URL to `/local/media-source-image-card.js` and the type to `JavaScript Module`.
+    
+    b. Via code:
+      - If you have a `configuration.yaml` file, add the following lines:
   ```yaml
   title: Home
   resources:
-    - url: /local/button-card.js
+    - url: /local/media-source-image-card.js
       type: module
   ```
 
@@ -58,6 +65,10 @@ This card is quite simple so there are only a few options:
 | apply_grayscale | boolean | | If `true` applies a grayscale on the image when entity is `off` |
 | forced_refresh_interval | integer | | Number of seconds to force an image refresh |
 | tap_action | string | `toggle` | Action to perform on click. One of `none`, `toggle` or `call-service`. See actions below |
+
+## Adding to dashboard
+
+
 
 ## Actions
 By default, when the card is clicked, it would toggle the entity. You can customize these action to be one of this:
