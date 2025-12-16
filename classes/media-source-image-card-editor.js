@@ -38,6 +38,12 @@ export class MediaSourceImageCardEditor extends HTMLElement {
         },
       },
       {
+        name: "refresh_entity",
+        selector: {
+          entity: {},
+        },
+      },
+      {
         name: "apply_grayscale",
         selector: {
           boolean: {},
@@ -86,6 +92,7 @@ export class MediaSourceImageCardEditor extends HTMLElement {
     const labels = {
       image: "Image",
       entity_id: "Entity",
+      refresh_entity: "Refresh Entity",
       apply_grayscale: "Apply Grayscale on 'off' state",
       aspect_ratio: "Aspect Ratio",
       object_fit: "Object Fit",

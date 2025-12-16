@@ -159,7 +159,9 @@ export class MediaSourceImageCard extends HTMLElement {
       this.renderContent();
     }
     // when a related entity changes, refresh content:
-    if (this.watchEntities(this.config.image, hass)) this.renderContent();
+    const imageChanged = this.watchEntities(this.config.image, hass);
+    const refreshEntityChanged = this.config.refresh_entity && this.watchEntities(this.config.refresh_entity, hass);
+    if (imageChanged || refreshEntityChanged) this.renderContent();
     // if forced_refresh_interval is set, register timeout to re-render content:
     if (this.config.forced_refresh_interval && !this.forced_refresh_interval) {
       this.forced_refresh_interval = setInterval(() => { this.renderContent() }, this.config.forced_refresh_interval * 1000);
