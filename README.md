@@ -12,28 +12,29 @@ It can also toggle an entity if provided in configuration, like a light, switch,
 
 ## Installation
 
-### Manual Instalation
+### Manual Installation
 
-1. Download the [media-source-image-card](http://www.github.com/luixal/lovelace-media-source-image-card/releases/latest/download/media-source-image-card.js)
-2. Place the file in your `config/www` folder
-3. Include the card as a resource through the UI (panels page) or using some code like this:
+1. Download the `media-source-image-card.js` file and the `classes` folder from the repository.
+2. Create a directory named `media-source-image-card` in your `config/www` folder.
+3. Place `media-source-image-card.js` and the `classes` folder into `config/www/media-source-image-card`.
+4. Include the card as a resource through the UI (panels page) or using some code like this:
 
     a. Via UI:
       - Go to _Settings_ > _Dashboards_ > _... menu_ > _Resources_
       - Click on the _Add Resource_ button.
-      - Set the URL to `/local/media-source-image-card.js` and the type to `JavaScript Module`.
+      - Set the URL to `/local/media-source-image-card/media-source-image-card.js` and the type to `JavaScript Module`.
     
     b. Via code:
       - If you have a `configuration.yaml` file, add the following lines:
   ```yaml
   title: Home
   resources:
-    - url: /local/media-source-image-card.js
+    - url: /local/media-source-image-card/media-source-image-card.js
       type: module
   ```
 
-4. If not already there, upload an image going to the Media Browser page in Home Assistant, inside the _"My media"_ folder.
-5. Include the card code dashboard by selecting the card type itself or just a manual card:
+5. If not already there, upload an image going to the Media Browser page in Home Assistant, inside the _"My media"_ folder.
+6. Include the card code dashboard by selecting the card type itself or just a manual card:
 
   ```yaml
     type: custom:media-source-image-card
